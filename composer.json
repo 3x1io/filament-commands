@@ -1,0 +1,33 @@
+{
+    "name": "3x1io/filament-commands",
+    "type": "library",
+    "description": "Beautiful package for [laravel:artisan] gui for cool kids.",
+    "license": "MIT",
+    "minimum-stability": "beta",
+    "require": {
+        "php": "^7.3|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "io3x1\\FilamentCommands\\": "./src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "io3x1\\FilamentCommands\\FilamentCommandsProvider"
+            ]
+        }
+    },
+    "archive": {
+        "exclude": [
+            "./resources/js",
+            "./resources/css",
+            "./tailwind.config.js",
+            "./webpack.mix.js",
+            "./mix-manifest.json",
+            "./package.json",
+            "./package-lock.json"
+        ]
+    }
+}

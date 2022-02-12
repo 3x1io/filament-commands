@@ -1,0 +1,29 @@
+{
+  "name": "artisan-gui",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "browser-sync": "^2.26.13",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "cross-env": "^7.0.2",
+    "laravel-mix": "^6.0.41",
+    "postcss": "^8.1.14",
+    "qs": "^6.9.6",
+    "tailwindcss": "^2.0",
+    "vue": "^2.6.12",
+    "vue-loader": "^15.9.5",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "webpack": "^5.68.0"
+  }
+}
