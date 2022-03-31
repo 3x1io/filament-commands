@@ -41,6 +41,8 @@ class FilamentCommandsProvider extends PluginServiceProvider
 
     public function register()
     {
+        parent::register();
+
         $this->mergeConfigFrom(
             "{$this->root}/config/artisan-gui.php",
             'artisan-gui'
@@ -58,6 +60,8 @@ class FilamentCommandsProvider extends PluginServiceProvider
 
     public function boot()
     {
+        parent::boot();
+
         $this->publishVendors();
         \View::share('guiRoot', $this->root);
     }
@@ -69,7 +73,6 @@ class FilamentCommandsProvider extends PluginServiceProvider
         ], 'artisan-gui-config');
 
         $this->publishes([
-            "{$this->root}/publish" => app_path(),
             "{$this->root}/stubs/css/gui.css" => public_path('vendor/artisan-gui/gui.css'),
             "{$this->root}/stubs/js/gui.js" => public_path('vendor/artisan-gui/gui.js'),
         ], 'artisan-gui-css-js');
