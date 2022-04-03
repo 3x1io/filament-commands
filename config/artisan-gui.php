@@ -13,7 +13,7 @@ return [
     */
     'middlewares' => [
         'web',
-//        'auth'
+        //        'auth'
     ],
 
     /*
@@ -27,7 +27,7 @@ return [
     | Why tilda? It's selected for prevent route names correlation.
     |
     */
-    'prefix' => '~',
+    'prefix' => 'admin/',
 
     /*
     |--------------------------------------------------------------------------
@@ -62,8 +62,7 @@ return [
     |   'make:event' => ['generate-files', 'create-event'],
     |
     */
-    'permissions' => [
-    ],
+    'permissions' => [],
 
     /*
     |--------------------------------------------------------------------------
