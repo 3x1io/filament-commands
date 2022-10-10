@@ -82,7 +82,7 @@ class GuiController extends Controller
             ->with($res);
     }
 
-    protected function prepareToJson(array $commands): array
+    public function prepareToJson(array $commands): array
     {
         $commands = $this->renameKeys($commands);
         $defined = Artisan::all();
@@ -100,6 +100,10 @@ class GuiController extends Controller
                 $commands[$gKey][$cKey] = $this->commandToArray($defined[$command] ?? $command);
             }
             $commands[$gKey] = array_values($commands[$gKey]);
+
+            if (!$commands[$gKey]) {
+                unset($commands[$gKey]);
+            }
         }
 
         return $commands;
