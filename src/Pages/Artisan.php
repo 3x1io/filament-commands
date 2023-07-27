@@ -22,6 +22,11 @@ class Artisan extends Page
         return ($local || !$only) && static::hasCommands();
     }
 
+    protected static function getNavigationGroup(): ?string
+    {
+        return strval(__(config('artisan-gui.section.group') ?? 'Settings'));
+    }
+
     public function mount(): void
     {
         abort_unless(static::hasCommands(), 403);
