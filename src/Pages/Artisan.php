@@ -16,15 +16,19 @@ class Artisan extends Page
 
     protected static function shouldRegisterNavigation(): bool
     {
-        $local = App::environment('local');
-        $only = config('artisan-gui.local', true);
+        $show = true;
+        if (config('artisan-gui.navigation.show-only-commands-showing', false)) {
+            $local = App::environment('local');
+            $only = config('artisan-gui.local', true);
+            $show = ($local || !$only);
+        }
 
-        return ($local || !$only) && static::hasCommands();
+        return $show && static::hasCommands();
     }
 
     protected static function getNavigationGroup(): ?string
     {
-        return strval(__(config('artisan-gui.section.group') ?? 'Settings'));
+        return strval(__(config('artisan-gui.navigation.group') ?? static::$navigationGroup));
     }
 
     public function mount(): void
