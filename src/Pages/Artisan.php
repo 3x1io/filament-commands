@@ -3,6 +3,7 @@
 namespace io3x1\FilamentCommands\Pages;
 
 use Filament\Pages\Page;
+use Illuminate\Support\Facades\App;
 use io3x1\FilamentCommands\Http\Controllers\GuiController;
 
 class Artisan extends Page
@@ -15,7 +16,10 @@ class Artisan extends Page
 
     protected static function shouldRegisterNavigation(): bool
     {
-        return static::hasCommands();
+        $local = App::environment('local');
+        $only = config('artisan-gui.local', true);
+
+        return ($local || !$only) && static::hasCommands();
     }
 
     public function mount(): void
