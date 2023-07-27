@@ -168,6 +168,23 @@ return [
             'view:cache',
             'view:clear'
         ]
-    ]
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Navigation
+    |--------------------------------------------------------------------------
+    |
+    | Specify settings for the navigation.
+    |
+    |   show-only-commands-showing:
+    |       if set true, hide in the navigation if the commands are not shown.
+    |   group:
+    |       set the group name for the navigation (will be translate).
+    */
+    // 'navigation' => [
+    //     'show-only-commands-showing' => true,
+    //     'group' => 'System Settings'
+    // ]
 
 ];
