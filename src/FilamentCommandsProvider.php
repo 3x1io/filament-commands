@@ -4,12 +4,12 @@
 namespace io3x1\FilamentCommands;
 
 use io3x1\FilamentCommands\Pages\Artisan;
-use Filament\PluginServiceProvider;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 
-class FilamentCommandsProvider extends PluginServiceProvider
+class FilamentCommandsProvider extends PackageServiceProvider
 {
 
     protected $root;
