@@ -5,6 +5,8 @@
 Simple but yet powerful library for running some [artisan](https://laravel.com/docs/8.x/artisan) commands.
 this packages is a frok of [artisan-gui](https://github.com/infureal/artisan-gui) with some custome for filament UI
 
+**NOTE** for V3 users please use this [repo](https://www.github.com/tomatophp/filament-artisan)
+
 ## Installation
 
 You can install the package via composer:
